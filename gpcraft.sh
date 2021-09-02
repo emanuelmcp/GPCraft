@@ -87,7 +87,6 @@ PRIMEROS_PASOS(){
                     --action allow \
                     --direction egress \
                     --rules tcp:25565 \
-                    --source-ranges 0.0.0.0/0 \
                     --target-tags $instancia
                 echo
                 echo Instalando Java...
