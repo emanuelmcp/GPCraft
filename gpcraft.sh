@@ -73,11 +73,17 @@ PRIMEROS_PASOS(){
                 echo
                 echo Asociando regla a la instancia $instancia...
                 echo
-                echo Permitiendo el trafico entrante en el puerto 25565...
+                echo Permitiendo el trafico entrante y saliente en el puerto 25565...
                 echo
                 gcloud compute firewall-rules create $regla \
                     --action allow \
                     --direction ingress \
+                    --rules tcp:25565 \
+                    --source-ranges 0.0.0.0/0 \
+                    --target-tags $instancia
+                gcloud compute firewall-rules create $regla \
+                    --action allow \
+                    --direction egress \
                     --rules tcp:25565 \
                     --source-ranges 0.0.0.0/0 \
                     --target-tags $instancia
