@@ -44,6 +44,8 @@ LISTAR_BUCKETS(){
 	gsutil ls
 }
 PRIMEROS_PASOS(){
+		sudo apt-get update
+		sudo apt-get upgrade
 		echo
                 echo Creando usuario minecraft...
                 sudo adduser minecraft
