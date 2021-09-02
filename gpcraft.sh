@@ -59,11 +59,9 @@ PRIMEROS_PASOS(){
                 echo Añadiendo usuario minecraft al grupo minecraft...
                 sudo usermod -a -G minecraft minecraft
                 echo
-                read -p "Introduce un nombre para la regla entrante: " regla_in
+                read -p "Introduce un nombre para la regla entrante: " regla
                 echo
-                read -p "Introduce un nombre para la regla saliente: " regla_out
-                echo
-                echo Creando las reglas firewall $regla_in y $regla_out...
+                echo Creando la regla de firewall $regla...
                 echo
                 echo Vincula la regla a una instancia...
                 echo
@@ -77,16 +75,11 @@ PRIMEROS_PASOS(){
                 echo
                 echo Permitiendo el trafico entrante y saliente en el puerto 25565...
                 echo
-                gcloud compute firewall-rules create $regla_in \
+                gcloud compute firewall-rules create $regla \
                     --action allow \
                     --direction ingress \
                     --rules tcp:25565 \
                     --source-ranges 0.0.0.0/0 \
-                    --target-tags $instancia
-                gcloud compute firewall-rules create $regla_out \
-                    --action allow \
-                    --direction egress \
-                    --rules tcp:25565 \
                     --target-tags $instancia
                 echo
                 echo Instalando Java...
