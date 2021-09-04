@@ -189,7 +189,7 @@ opcion=0
 		echo
                 echo Iniciando el servidor de minecraft...
 		echo
-                screen -S sv java -Xms4G -Xmx8G -jar server.jar
+                sudo screen -S sv java -Xms4G -Xmx8G -jar server.jar
             elif [[ $seleccion == "n" ]]; then
                 VOLVER_MENU
 
