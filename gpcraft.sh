@@ -181,6 +181,7 @@ opcion=0
             ;;
         3) clear
 	    echo "ESTA OPCION INICIA TU SERVIDOR MINECRAFT EN SEGUNDO PLANO"
+	    echo
             read -p "¿Estas seguro de que quieres iniciar el servidor (s/n): " seleccion
             if [[ $seleccion == "s" ]];
             then
@@ -188,7 +189,7 @@ opcion=0
 		echo
                 echo Iniciando el servidor de minecraft...
 		echo
-                sudo java -Xms4G -Xmx8G -jar server.jar nogui
+                screen -S sv java -Xms4G -Xmx8G -jar server.jar
             elif [[ $seleccion == "n" ]]; then
                 VOLVER_MENU
 
