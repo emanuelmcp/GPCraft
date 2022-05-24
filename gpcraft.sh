@@ -109,10 +109,6 @@ opcion=0
     echo
     ip=$(wget -qO- ifconfig.co/ip)
     echo "ACCEDE A TU SERVIDOR: $ip"
-    echo
-    echo "TWITTER: https://twitter.com/sd_juba"
-    echo
-    echo "APOYAR POR PAYPAL: sdjuba.tv@gmail.com"
     echo 
     echo "1) INSTALAR JAVA Y SERVIDOR OFICIAL"
     echo "2) CAMBIAR SERVIDOR A PAPERMC/SPIGOT"
