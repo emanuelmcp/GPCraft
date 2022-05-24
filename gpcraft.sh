@@ -104,7 +104,7 @@ sleep 1
 opcion=0
     echo
     echo -------------------------------
-    echo --- GPCraft 1.0 by SDJuba ---
+    echo --- GPCraft 1.0 by Emanuel Carrero ---
     echo -------------------------------
     echo
     ip=$(wget -qO- ifconfig.co/ip)
